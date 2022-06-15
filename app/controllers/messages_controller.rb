@@ -4,7 +4,7 @@ class MessagesController < ApplicationController
   end
 
   def show
-    @message = Message.find(params[:id])
+    set_message
   end
 
   def new
@@ -24,11 +24,11 @@ class MessagesController < ApplicationController
   end
 
   def edit
-    @message = Message.find(params[:id])
+    set_message
   end
 
   def update
-    @message = Message.find(params[:id])
+    set_message
 
     if @message.update(message_params)
       flash[:success] = 'Message は正常に更新されました'
@@ -40,7 +40,7 @@ class MessagesController < ApplicationController
   end
 
   def destroy
-    @message = Message.find(params[:id])
+    set_message
     @message.destroy
 
     flash[:success] = 'Message は正常に削除されました'
@@ -49,7 +49,10 @@ class MessagesController < ApplicationController
   
    private
 
-  # Strong Parameter
+  def set_message
+    @message = Message.find(params[:id])
+  end
+
   def message_params
     params.require(:message).permit(:content)
   end
