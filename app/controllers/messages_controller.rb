@@ -2,7 +2,9 @@ class MessagesController < ApplicationController
   def index
     @messages = Message.all
     
-     @xxxx = Message.xxxx
+    @xxxx = Message.xxxx
+    Message.yyyy
+    @zzzz = Message.zzzz
   end
 
   def show
