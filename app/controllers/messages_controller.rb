@@ -5,6 +5,10 @@ class MessagesController < ApplicationController
     @xxxx = Message.xxxx
     Message.yyyy
     @zzzz = Message.zzzz
+    
+    @bokete_img = Message.read
+    
+    @img_url = @bokete_img.split("\n")
   end
 
   def show
