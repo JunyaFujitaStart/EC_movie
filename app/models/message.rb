@@ -16,6 +16,6 @@ class Message < ApplicationRecord
   end
   
   def self.read
-    File.read("#{Rails.root}/app/models/myfile.txt")
+    File.read("#{Rails.root}/app/controllers/img_url.txt")
   end
 end

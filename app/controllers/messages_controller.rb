@@ -1,14 +1,28 @@
 class MessagesController < ApplicationController
+
   def index
+    @result = `python2 #{Rails.root}/app/controllers/sc1.py`
+
+    @sc_url = @result.split('"').grep(/[jpg]/).select do |url|
+                url.include?("jpg")
+            end
+    
+    @img_url = []
+    i=0
+    @sc_url.each do |sc_url|
+      @img_url[i] = "https:#{sc_url}"
+      i += 1
+    end
+    
     @messages = Message.all
     
-    @xxxx = Message.xxxx
-    Message.yyyy
-    @zzzz = Message.zzzz
+    # @xxxx = Message.xxxx
+    # Message.yyyy
+    # @zzzz = Message.zzzz
     
     @bokete_img = Message.read
     
-    @img_url = @bokete_img.split("\n")
+    # @img_url = @bokete_img.split("\n")
   end
 
   def show

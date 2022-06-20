@@ -1,5 +1,17 @@
 <h1>メッセージ一覧</h1>
 
+  <!--<p><%= @sc_url[0] %></p>-->
+  <!--<p><%= @sc_url[1] %></p>-->
+  <!--<p><%= @sc_url[2] %></p>-->
+  <!--<p><%= @sc_url[3] %></p>-->
+  <!--<p><%= @sc_url[4] %></p>-->
+  <!--<p><%= @sc_url[5] %></p>-->
+  <!--<p><%= @sc_url[6] %></p>-->
+  <!--<p><%= @sc_url[7] %></p>-->
+  <!--<p><%= @sc_url[8] %></p>-->
+  <!--<p><%= @sc_url[9] %></p>-->
+  
+  
 <ul>
   <% @messages.each do |message| %>
     <li><%= link_to message.id, message %> : <%= message.content %></li>
@@ -12,18 +24,11 @@
     
     <p>
 <%= @img_url.each_with_index do |img_url, i| %>
-<p><%= image_tag img_url %></p>
-<% end %>
-     
 <figure>
-  <figcaption>No.1</figcaption>
-  <p class="image_tag"><%= image_tag 'https://d2dcan0armyq93.cloudfront.net/photo/odai/600/6a8ec20144e25e6f915b144f79cffdef_600.jpg',width: '100%', height: '100%' %></p>
-  <figcaption>bokete 1</figcaption>
+<figcaption>No. <%= i+1 %></figcaption>
+<p><%= image_tag img_url %></p>
 </figure>
+<% end %>
 
-
-
-
-
-
+     
 <%= link_to '新規メッセージの投稿', new_message_path %>
