@@ -1,0 +1,9 @@
+h1 {
+  color:#696969;
+}
+
+figure {
+  display: inline-block;
+  width: 40vw;
+  height: 45vw;
+}
