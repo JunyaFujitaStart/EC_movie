@@ -7,6 +7,22 @@ figcaption {
   margin-left: 20px;
 }
 
+.card {
+  display: inline-block;
+}
+
+.card-body, .card-title, .card-text {
+  padding: 0 20px 0 20px;
+}
+
+a {
+  width: 15vw;
+}
+
+.btn {
+  margin-left: 90px;
+}
+
 figure {
   display: inline-block;
   width: 400px;
@@ -18,8 +34,9 @@ figure {
 wrapper {
   padding: 0px 10vw 0px 5vw;
 }
+
 .image {
-  margin: 50px 20px 50px 20px;
+  margin: 0px 20px 0px 20px;
 }
 .space {
   margin-left: 15px;

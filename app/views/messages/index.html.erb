@@ -3,6 +3,8 @@
 
 <wrapper>
   
+
+  
 <h1>メッセージ一覧</h1>
 
   <!--<p><%= @sc_url[0] %></p>-->
@@ -29,9 +31,14 @@
     
 
 <%= @img_url.each_with_index do |img_url, i| %>
-<figure>
+<figure class="card" style="width: 400px;">
 <figcaption>No. <%= i+1 %></figcaption>
-<p class="image"><%= image_tag img_url,width: '350px', height: '350px'  %></p>
+<p class="image card-img-top" alt="..."><%= image_tag img_url,width: '350px', height: '350px'  %></p>
+<span class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </span>
 </figure>
 <% end %>
      
