@@ -1,5 +1,8 @@
 <%= stylesheet_link_tag "index", :media => "all" %>
 
+
+<wrapper>
+
 <h1>メッセージ一覧</h1>
 
   <!--<p><%= @sc_url[0] %></p>-->
@@ -24,13 +27,13 @@
 <p><%= @zzzz %></p>
 
     
-    <p>
+
 <%= @img_url.each_with_index do |img_url, i| %>
 <figure>
 <figcaption>No. <%= i+1 %></figcaption>
-<p><%= image_tag img_url,width: '300px', height: '300px'  %></p>
+<p class="image"><%= image_tag img_url,width: '350px', height: '350px'  %></p>
 </figure>
 <% end %>
-</p>
      
 <%= link_to '新規メッセージの投稿', new_message_path %>
+</wrapper>

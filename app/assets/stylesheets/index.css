@@ -2,8 +2,29 @@ h1 {
   color:#696969;
 }
 
+figcaption {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
 figure {
   display: inline-block;
-  width: 40vw;
-  height: 45vw;
+  width: 400px;
+  height: 700px;
+  border: 2px solid #000000;
+  margin: 5px 1.5vw 5px 1.5vw;
+}
+
+wrapper {
+  padding: 0px 10vw 0px 5vw;
+}
+.image {
+  margin: 50px 20px 50px 20px;
+}
+.space {
+  margin-left: 15px;
+}
+
+#text {
+  display: none;
 }
