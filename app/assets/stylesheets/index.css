@@ -35,3 +35,19 @@ header {
 .top-right:hover {
   opacity: 0.4;
 }
+
+.text_slider p{
+  padding-top: 13px;
+  text-align: right;
+  animation : scrollText_slider 15s linear infinite;
+  color: #ffffff;
+}
+.text_slider {
+  background-color: #696969;
+  height: 50px;
+}
+
+@keyframes scrollText_slider{
+0% { transform: translateX(0)}
+100% { transform: translateX(-100%)}
+}
