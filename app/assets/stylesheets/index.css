@@ -1,47 +1,37 @@
-h1 {
-  color:#696969;
+header {
+    display: flex;
+    justify-content: space-between;
+}
+.top-left div {
+  text-align: center;
 }
 
-figcaption {
-  margin-top: 20px;
+.top-left {
+  margin: auto 0px auto 50px;
+}
+.top-left:hover {
+   opacity: 0.4;
+}
+.top-center {
+}
+.top-center h1:hover {
+  opacity: 0.4;
+}
+.top-center .A {
+  margin-left: 10px;
+}
+.top-center .A:hover {
+  opacity: 0.4;
+}
+.top-center .B {
   margin-left: 20px;
 }
-
-.card {
-  display: inline-block;
+.top-center .B:hover {
+  opacity: 0.4;
 }
-
-.card-body, .card-title, .card-text {
-  padding: 0 20px 0 20px;
+.top-right {
+  margin: auto 50px auto 0px;
 }
-
-a {
-  width: 15vw;
-}
-
-.btn {
-  margin-left: 90px;
-}
-
-figure {
-  display: inline-block;
-  width: 400px;
-  height: 700px;
-  border: 2px solid #000000;
-  margin: 5px 1.5vw 5px 1.5vw;
-}
-
-wrapper {
-  padding: 0px 10vw 0px 5vw;
-}
-
-.image {
-  margin: 0px 20px 0px 20px;
-}
-.space {
-  margin-left: 15px;
-}
-
-#text {
-  display: none;
+.top-right:hover {
+  opacity: 0.4;
 }

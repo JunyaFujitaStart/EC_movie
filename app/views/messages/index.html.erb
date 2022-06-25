@@ -1,46 +1,32 @@
 <%= stylesheet_link_tag "index", :media => "all" %>
 
-
 <wrapper>
+<header>
+<div class="top-left">
+  <div><%= image_tag 'search.svg' %></div>
+  <p>search</p>
+</div>
   
+  
+<div class="top-center">  
+  <h1>タイトル</h1>
+  <span class="A">リンクA</span><span class="B">リンクB</span>
+</div>
 
-  
-<h1>メッセージ一覧</h1>
+<div class="top-right">
+  <div>MENU</div>
+</div>
+</header>
 
-  <!--<p><%= @sc_url[0] %></p>-->
-  <!--<p><%= @sc_url[1] %></p>-->
-  <!--<p><%= @sc_url[2] %></p>-->
-  <!--<p><%= @sc_url[3] %></p>-->
-  <!--<p><%= @sc_url[4] %></p>-->
-  <!--<p><%= @sc_url[5] %></p>-->
-  <!--<p><%= @sc_url[6] %></p>-->
-  <!--<p><%= @sc_url[7] %></p>-->
-  <!--<p><%= @sc_url[8] %></p>-->
-  <!--<p><%= @sc_url[9] %></p>-->
-  
-  
+<h2>メッセージ一覧</h2>
+
+
+
 <ul>
   <% @messages.each do |message| %>
     <li><%= link_to message.id, message %> : <%= message.content %></li>
   <% end %>
 </ul>
-
-<p><%= @xxxx %></p>
-<p><%= @zzzz %></p>
-
-    
-
-<%= @img_url.each_with_index do |img_url, i| %>
-<figure class="card" style="width: 400px;">
-<figcaption>No. <%= i+1 %></figcaption>
-<p class="image card-img-top" alt="..."><%= image_tag img_url,width: '350px', height: '350px'  %></p>
-<span class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </span>
-</figure>
-<% end %>
      
 <%= link_to '新規メッセージの投稿', new_message_path %>
 </wrapper>
