@@ -52,14 +52,21 @@ header {
   height: 50px;
 }
 .image_slider div {
+  height: 100%;
+  width: 100%;
   margin-top: 10px;
-  text-align: center;  
+  text-align: center;
 }
+
 .image1:hover {
-   opacity: 0.4;
+  transform: scale(1.5);
+  transition-duration: 1.0s;
+  opacity: 0.4;
 }
 .image2:hover {
-   opacity: 0.4;
+  transform: rotateY( 360deg );
+  transition-duration: 1.0s;
+  opacity: 0.4;
 }
 .image3:hover {
    opacity: 0.4;
