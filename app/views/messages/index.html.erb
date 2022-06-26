@@ -1,4 +1,5 @@
 <%= stylesheet_link_tag "index", :media => "all" %>
+<%= stylesheet_link_tag "modal", :media => "all" %>
 
 <wrapper>
 <header>
@@ -13,7 +14,7 @@
 </div>
 
 <div class="top-right">
-  <div>MENU</div>
+  <div id="modalOpen" class="menu">MENU</div>
 </div>
 </header>
 
@@ -36,6 +37,35 @@
     <div class="image11"><%= image_tag 'sora1.jpg', size: '350x300' %><p>click here!!</p><span>ticktoker そら</span></div>
     <div class="image12"><%= image_tag 'はしも。1.jpg', size: '350x300' %><p>click here!!</p><span>ticktoker はしも。</span></div>
   </div>
+  
+  <div>
+    <p>サイト製作者　ツイート</p>
+  <blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E4%BB%8A%E6%97%A5%E3%81%AE%E7%A9%8D%E3%81%BF%E4%B8%8A%E3%81%92?src=hash&amp;ref_src=twsrc%5Etfw">#今日の積み上げ</a> <br>Pythonを触りだして5日目。<br>Webスクレイピングを試してみて、.pyファイルを実行し、あるサイトから、画像URLの取得に成功。次に、ruby on railsで作成中のサイトに、標準入力、出力を使って、スクレイピング結果の受け渡しに成功。<br><br>Rails上のビューで表示可能に‥<br>少しずつ‥</p>&mdash; 真面目かもしれない気まぐれな猫 (@unounounouno31) <a href="https://twitter.com/unounounouno31/status/1538844535047958528?ref_src=twsrc%5Etfw">June 20, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+  
+  
+  
+  <!--モーダルウィンドウ（MENUクリック時に呼び出されるHTML/CSS要素）-->
+  <div id="easyModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1>Great job 🎉</h1>
+        <span class="modalClose">×</span>
+      </div>
+      <div class="modal-body">
+        <p>You've just displayed this awesome Modal Window!</p>
+        <p>Let's enjoy learning JavaScript ☺️</p>
+        <a href="https://twitter.com/unounounouno31"><img class="twitter_icon" src="/assets/twitter_icon.jpeg" alt="twitter" width="30" height="30"></a>
+        <a href="https://www.youtube.com/"><img class="youtube_icon" src="/assets/youtube.jpeg" alt="youtube" width="30" height="30"></a>
+      </div>
+    </div>
+  </div>
+  <!--モーダルウィンドウ（終）-->
+  
+  
+  
+  
+  
 <footer>
   <div>
     <span>お問合せ</span>
