@@ -17,16 +17,21 @@ header {
 .top-center h1:hover {
   opacity: 0.4;
 }
-.top-center .A {
+.contents_bar {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px; 
+}
+.A {
   margin-left: 10px;
 }
-.top-center .A:hover {
+.A:hover {
   opacity: 0.4;
 }
-.top-center .B {
+.B {
   margin-left: 20px;
 }
-.top-center .B:hover {
+.B:hover {
   opacity: 0.4;
 }
 .top-right {
@@ -45,6 +50,11 @@ header {
 .text_slider {
   background-color: #696969;
   height: 50px;
+}
+.image_slider li{
+  list-style: none;
+  width: auto;
+  height: 15%;
 }
 
 @keyframes scrollText_slider{
