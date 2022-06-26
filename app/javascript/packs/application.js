@@ -9,3 +9,11 @@ import "channels"
 
 Rails.start()
 Turbolinks.start()
+
+//= require jquery
+//= require jquery_ujs
+
+//= require jquery-rails
+
+//= require_tree .
+
