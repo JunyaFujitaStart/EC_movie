@@ -2,9 +2,10 @@
 //= require jquery
 //= require rails-ujs
 /*global $*/
-window.onload = function(){
-  alert('js!');
-}
+// 起動済み、js↓
+// window.onload = function(){
+//   alert('js!');
+// }
 
 // $(function() {
 //     $('.image_slider').slick({
