@@ -469,24 +469,56 @@ footer span, footer div{
 
 .menber_activity {
   height: 400px;
-  width: 95%;
+  width: 100%;
 }
 
-.menber_activity_image{
+.menber_activity_image1 {
   background-image:url(/assets/SAYA.jpg);
   background-position: 30%  20%;
   background-repeat: no-repeat;
 }
+.menber_activity_image1 div {
+  text-align: center;
+  padding-left: 120px;
+  color: #ffffff;
+}
 
-.menber_activity div {
-  height: 100%;
-  width: 100%;
+.menber_activity_image2 {
+  background-image:url(/assets/YUKA.jpg);
+  background-position: 30%  20%;
+  background-repeat: no-repeat;
+}
+.menber_activity_image2 div {
+  text-align: center;
+  padding-left: 120px;
+  color: #ffffff;
+}
+
+.menber_activity_image3 {
+  background-image:url(/assets/sora1.jpg);
+  background-position: 30%  20%;
+  background-repeat: no-repeat;
+}
+.menber_activity_image3 div {
+  text-align: center;
+  padding-left: 120px;
+  color: #ffffff;
+}
+
+.menber_activity_image4 {
+  background-image:url(/assets/はしも。1.jpg);
+  background-position: 30%  20%;
+  background-repeat: no-repeat;
+}
+.menber_activity_image4 div {
+  text-align: center;
+  padding-left: 120px;
+  color: #ffffff;
 }
 
 .menber_activity div div{
+  width: 100vw;
   display: inline-block;
-  margin: 0 0 0 40px;
-  padding-left: 30px;
 }
 
 .above {
