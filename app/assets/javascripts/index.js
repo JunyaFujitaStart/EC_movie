@@ -56,6 +56,8 @@ $(function() {
     });
 });			
 
+
+// modal.js
 const buttonOpen = document.getElementById('modalOpen');
 const modal = document.getElementById('easyModal');
 const buttonClose = document.getElementsByClassName('modalClose')[0];
@@ -79,3 +81,14 @@ function outsideClose(e) {
     modal.style.display = 'none';
   }
 }
+
+
+//menber_activity.js
+$(function() {
+  $('.menber_activity').slick({
+      dots: true
+      });
+});
+
+
+
