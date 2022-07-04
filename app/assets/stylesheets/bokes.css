@@ -1,0 +1,51 @@
+// Place all the styles related to the bokes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+h1 {
+  color:#696969;
+  font-size: 15px;
+}
+
+figcaption {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.card {
+  display: inline-block;
+}
+
+.card-body, .card-title, .card-text {
+  padding: 0 20px 0 20px;
+}
+
+a {
+  width: 15vw;
+}
+
+.btn {
+  margin-left: 90px;
+}
+
+figure {
+  display: inline-block;
+  width: 400px;
+  height: 700px;
+  border: 2px solid #000000;
+  margin: 5px 1.5vw 5px 1.5vw;
+}
+
+wrapper {
+  padding: 0px 10vw 0px 5vw;
+}
+
+.image {
+  margin: 0px 20px 0px 20px;
+}
+.space {
+  margin-left: 15px;
+}
+
+#text {
+  display: none;
+}

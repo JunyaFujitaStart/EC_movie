@@ -2,74 +2,82 @@
 <%= stylesheet_link_tag "modal", :media => "all" %>
 
 <wrapper>
+<h1>To brighten<br> your<br> happiness</h1>
 <header>
-<div class="top-left">
-  <div><%= image_tag 'search.svg' %></div>
-  <p>search</p>
-</div>
-  
-  
-<div class="top-center">  
-  <h1>タイトル</h1>
-</div>
-
-<div class="top-right">
-  <div id="modalOpen" class="menu">MENU</div>
-</div>
+  <div class="top-left">
+    <div><%= image_tag 'search_white.png', size: '25x25' %></div>
+    <p>search</p>
+  </div>
+      
+      
+  <div class="top-center">  
+    
+  </div>
+    
+  <div class="top-right">
+    <div id="modalOpen" class="menu">MENU</div>
+  </div>
 </header>
 
 <div class="contents_bar">
-    <span class="A">リンクA</span><span class="B">リンクB</span>
+    <span class="A">リンクA</span><span class="B">リンクB</span><span class="C"><%= link_to 'ボケ集', bokes_path, class: "text-decoration-none" %></span>
   </div>
   <div class="text_slider"><p>Welcome to my page, 「タイトル（考え中）」!!オーダーメイドいけます！！</p></div>
 
   <div class="image_slider">
-    <div class="image1"><%= image_tag 'SAYA.jpg', size: '350x300' %><p>click here!!</p><span>ticktoker さや</span></div>
-    <div class="image2"><%= image_tag 'YUKA.jpg', size: '350x300' %><p>click here!!</p><span>ticktoker ゆか</span></div>
-    <div class="image3"><%= image_tag 'sora1.jpg', size: '350x300' %><p>click here!!</p><span>ticktoker そら</span></div>
-    <div class="image4"><%= image_tag 'はしも。1.jpg', size: '350x300' %><p>click here!!</p><span>ticktoker はしも。</span></div>
-    <div class="image5"><%= image_tag 'SAYA.jpg', size: '350x300' %><p>click here!!</p><span>ticktoker さや</span></div>
-    <div class="image6"><%= image_tag 'YUKA.jpg', size: '350x300' %><p>click here!!</p><span>ticktoker ゆか</span></div>
-    <div class="image7"><%= image_tag 'sora1.jpg', size: '350x300' %><p>click here!!</p><span>ticktoker そら</span></div>
-    <div class="image8"><%= image_tag 'はしも。1.jpg', size: '350x300' %><p>click here!!</p><span>ticktoker はしも。</span></div>
-    <div class="image9"><%= image_tag 'SAYA.jpg', size: '350x300' %><p>click here!!</p><span>ticktoker さや</span></div>
-    <div class="image10"><%= image_tag 'YUKA.jpg', size: '350x300' %><p>click here!!</p><span>ticktoker ゆか</span></div>
-    <div class="image11"><%= image_tag 'sora1.jpg', size: '350x300' %><p>click here!!</p><span>ticktoker そら</span></div>
-    <div class="image12"><%= image_tag 'はしも。1.jpg', size: '350x300' %><p>click here!!</p><span>ticktoker はしも。</span></div>
+    <div class="image1"><%= image_tag 'SAYA.jpg', size: '350x300' %><p>click here!!</p><span>ぱくたそmodel さや</span></div>
+    <div class="image2"><%= image_tag 'YUKA.jpg', size: '350x300' %><p>click here!!</p><span>ぱくたそmodel ゆか</span></div>
+    <div class="image3"><%= image_tag 'sora1.jpg', size: '350x300' %><p>click here!!</p><span>ぱくたそmodel そら</span></div>
+    <div class="image4"><%= image_tag 'はしも。1.jpg', size: '350x300' %><p>click here!!</p><span>ぱくたそmodel はしも。</span></div>
+    <div class="image5"><%= image_tag 'SAYA.jpg', size: '350x300' %><p>click here!!</p><span>ぱくたそmodel さや</span></div>
+    <div class="image6"><%= image_tag 'YUKA.jpg', size: '350x300' %><p>click here!!</p><span>ぱくたそmodel ゆか</span></div>
+    <div class="image7"><%= image_tag 'sora1.jpg', size: '350x300' %><p>click here!!</p><span>ぱくたそmodel そら</span></div>
+    <div class="image8"><%= image_tag 'はしも。1.jpg', size: '350x300' %><p>click here!!</p><span>ぱくたそmodel はしも。</span></div>
+    <div class="image9"><%= image_tag 'SAYA.jpg', size: '350x300' %><p>click here!!</p><span>ぱくたそmodel さや</span></div>
+    <div class="image10"><%= image_tag 'YUKA.jpg', size: '350x300' %><p>click here!!</p><span>ぱくたそmodel ゆか</span></div>
+    <div class="image11"><%= image_tag 'sora1.jpg', size: '350x300' %><p>click here!!</p><span>ぱくたそmodel そら</span></div>
+    <div class="image12"><%= image_tag 'はしも。1.jpg', size: '350x300' %><p>click here!!</p><span>ぱくたそmodel はしも。</span></div>
   </div>
-  <div class="above"></div>
+
+
+
+  <div class="above"><p>ぱくたそmodel 一覧</p></div>
   <div class="menber_activity">
       <div class="menber_activity_image1">
-      <h1> 1 さや </h1>
-      <div><span><%= image_tag 'SAYA.jpg', size: '350x300' %></span><p>天真爛漫のtiktoker。心踊る世界を夢見て、tiktokerへと転身。「私の道を決めるのは、質でも量でもない、心のトキメキ具合だ！（ドン）」</p></p></div>
+      <h2> 1 さや </h2>
+      <div><span><%= image_tag 'SAYA.jpg', size: '350x300' %></span><p>天真爛漫のぱくたそmodel。心踊る世界を夢見て、ぱくたそmodelへと転身。「私の道を決めるのは、質でも量でもない、心のトキメキ具合だ！（ドン）」</p></div>
       </div>
     <div class="menber_activity_image2">
-      <h1> 2 ゆか </h1>
-      <div><span><%= image_tag 'YUKA.jpg', size: '350x300' %></span><p>誠心誠意のtiktoker。見たものを和ませ、唯一無二の感情を生み出す。彼女のモットーは、「雨のち晴れ」</p></p></div>
+      <h2> 2 ゆか </h2>
+      <div><span><%= image_tag 'YUKA.jpg', size: '350x300' %></span><p>誠心誠意のぱくたそmodel。見たものを和ませ、唯一無二の感情を生み出す。彼女のモットーは、「雨のち晴れ」</p></div>
     </div>
     <div class="menber_activity_image3">
-      <h1> 3 そら </h1>
-      <div><span><%= image_tag 'sora1.jpg', size: '350x300' %></span><p>理路整然のtiktoker。論理的に思考し、最適解を常に導くことを生きがいにしている。「詰将棋をしているときに浮かぶ棋譜」をあるあるネタにしてくる。</p></p></div>
+      <h2> 3 そら </h2>
+      <div><span><%= image_tag 'sora1.jpg', size: '350x300' %></span><p>理路整然のぱくたそmodel。論理的に思考し、最適解を常に導くことを生きがいにしている。「詰将棋をしているときに浮かぶ棋譜」をあるあるネタにしてくる。</p></div>
     </div>
     <div class="menber_activity_image4">
-      <h1> 4 はしも。 </h1>
-      <div><span><%= image_tag 'はしも。1.jpg', size: '350x300' %></span><p>四苦八苦のtiktoker。常にネタを考えているが、ボツになることもしばしば。彼が唯一市民権を得た特技は、ネタがなくて煮詰まった時に出る「困り顔」</p></p></div>
+      <h2> 4 はしも。 </h2>
+      <div><span><%= image_tag 'はしも。1.jpg', size: '350x300' %></span><p>四苦八苦のぱくたそmodel。常にネタを考えているが、ボツになることもしばしば。彼が唯一市民権を得た特技は、ネタがなくて煮詰まった時に出る「困り顔」</p></div>
     </div>
   </div>
   <div class="under"></div>
   
-  <div>
-    <p>サイト製作者　ツイート</p>
-  <blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E4%BB%8A%E6%97%A5%E3%81%AE%E7%A9%8D%E3%81%BF%E4%B8%8A%E3%81%92?src=hash&amp;ref_src=twsrc%5Etfw">#今日の積み上げ</a> <br>Pythonを触りだして5日目。<br>Webスクレイピングを試してみて、.pyファイルを実行し、あるサイトから、画像URLの取得に成功。次に、ruby on railsで作成中のサイトに、標準入力、出力を使って、スクレイピング結果の受け渡しに成功。<br><br>Rails上のビューで表示可能に‥<br>少しずつ‥</p>&mdash; 真面目かもしれない気まぐれな猫 (@unounounouno31) <a href="https://twitter.com/unounounouno31/status/1538844535047958528?ref_src=twsrc%5Etfw">June 20, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-  </div>
-  
-  
+  <section class="profile">
+    <div class="information">
+      <p>ぱくたそmodel さや</p>
+    </div>
+    <div class="tweet">
+      <p>サイト製作者　ツイート</p>
+      <a class="twitter-timeline" data-width="400" data-height="600" href="https://twitter.com/unounounouno31?ref_src=twsrc%5Etfw">Tweets by unounounouno31</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+  </section>
+  <div class="under"></div>
   
   <!--モーダルウィンドウ（MENUクリック時に呼び出されるHTML/CSS要素）-->
   <div id="easyModal" class="modal">
     <div class="modal-content">
       <div class="modal-header">
-        <h1>Great job 🎉</h1>
+        <h2>Great job 🎉</h2>
         <span class="modalClose">×</span>
       </div>
       <div class="modal-body">
@@ -81,10 +89,6 @@
     </div>
   </div>
   <!--モーダルウィンドウ（終）-->
-  
-  
-  
-  
   
 <footer>
   <div>
