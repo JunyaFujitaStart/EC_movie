@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   
   resources :messages
   resources :bokes
+  resources :tiktokers
 end

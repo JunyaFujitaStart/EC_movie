@@ -1,0 +1,81 @@
+
+/*menber_activity ~ tiktoker 紹介 ~*/
+
+.menber_activity {
+  height: 400px;
+  width: 100%;
+}
+
+.menber_activity_image1 {
+  background-image:url(/assets/SAYA.jpg);
+  background-position: 30%  20%;
+  background-repeat: no-repeat;
+}
+.menber_activity_image1 div {
+  text-align: center;
+  padding-left: 120px;
+  color: #ffffff;
+  text-shadow:
+    1px 0 0 black,
+    0 1px 0 black,
+    -1px 0 0 black,
+    0 -1px 0 black;
+}
+
+.menber_activity_image2 {
+  background-image:url(/assets/YUKA.jpg);
+  background-position: 30%  20%;
+  background-repeat: no-repeat;
+}
+.menber_activity_image2 div {
+  text-align: center;
+  padding-left: 120px;
+  color: #ffffff;
+  text-shadow:
+    1px 0 0 black,
+    0 1px 0 black,
+    -1px 0 0 black,
+    0 -1px 0 black;
+}
+
+.menber_activity_image3 {
+  background-image:url(/assets/sora1.jpg);
+  background-position: 30%  20%;
+  background-repeat: no-repeat;
+}
+.menber_activity_image3 div {
+  text-align: center;
+  padding-left: 120px;
+  color: #ffffff;
+  text-shadow:
+    1px 0 0 black,
+    0 1px 0 black,
+    -1px 0 0 black,
+    0 -1px 0 black;
+}
+
+.menber_activity_image4 {
+  background-image:url(/assets/はしも。1.jpg);
+  background-position: 30%  20%;
+  background-repeat: no-repeat;
+}
+.menber_activity_image4 div {
+  text-align: center;
+  padding-left: 120px;
+  color: #ffffff;
+  text-shadow:
+    1px 0 0 black,
+    0 1px 0 black,
+    -1px 0 0 black,
+    0 -1px 0 black;
+}
+
+.menber_activity div div{
+  width: 100%;
+  display: inline-block;
+}
+
+.profile {
+  margin: 200px 0 200px 0; 
+  background-color: #f5f5f5;
+}

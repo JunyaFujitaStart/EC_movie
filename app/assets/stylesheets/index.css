@@ -16,25 +16,47 @@ header {
     background-repeat: no-repeat;
     background-position: -650px  -450px;
 }
+header nav {
+  padding: 50px;
+  position: fixed;
+  width: 100vw;
+  height: 200px;
+  top: 0;
+  z-index: 5;
+  display: table;
+}
 wrapper {
   width: 100%;
   margin: 0;
   padding: 0;
 }
 
-.top-left div {
-  text-align: center;
-}
 .top-left p {
+  margin: 0;
+  padding: 0;
   color: #ffffff;
 }
 
 .top-left {
+  display: table-cell;
   margin: 50px 0px auto 50px;
+  width: 50px;
 }
 .top-left:hover {
    opacity: 0.4;
 }
+.top-center {
+  display: table-cell;
+}
+.top-right {
+  display: table-cell;
+  margin: 50px 50px auto 0px;
+  width: 50px;
+}
+.top-right:hover {
+  opacity: 0.4;
+}
+
 .contents_bar {
   display: flex;
   justify-content: flex-start;
@@ -52,12 +74,7 @@ wrapper {
 .B:hover {
   opacity: 0.4;
 }
-.top-right {
-  margin: 50px 50px auto 0px;
-}
-.top-right:hover {
-  opacity: 0.4;
-}
+
 
 .text_slider p{
   padding-top: 13px;
@@ -70,15 +87,26 @@ wrapper {
   height: 50px;
 }
 
-
+.idea {
+  height:500px;
+  background-image: url('assets/our_business.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 100%;
+}
+.idea p {
+  background-color: #ffffff;
+}
+.idea span {
+  background-color: #ffffff
+}
 .our_business {
   /*height: 720px;*/
   display:table;
-  /*background-image: url('assets/our_business.jpg');*/
-  /*background-repeat: no-repeat;*/
-  /*background-size: cover;*/
   width:85rem;
   table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 50px 0;
 }
 .our_business div {
   display: table-cell;
@@ -112,8 +140,18 @@ h3 {
   left: 30%;
 }
 
-
-
+.map {
+  display: table;
+  border-collapse: separate;
+  border-spacing: 50px 0;
+}
+.map div{
+  padding: 50px;
+  display: table-cell;
+}
+.map p {
+  text-align: center;
+}
 .image_slider div {
   height: 100%;
   width: 100%;
@@ -528,87 +566,6 @@ footer {
 footer span, footer div{
   color: #ffffff;
 
-}
-
-/*menber_activity ~ tiktoker 紹介 ~*/
-
-.menber_activity {
-  height: 400px;
-  width: 100%;
-}
-
-.menber_activity_image1 {
-  background-image:url(/assets/SAYA.jpg);
-  background-position: 30%  20%;
-  background-repeat: no-repeat;
-}
-.menber_activity_image1 div {
-  text-align: center;
-  padding-left: 120px;
-  color: #ffffff;
-  text-shadow:
-    1px 0 0 black,
-    0 1px 0 black,
-    -1px 0 0 black,
-    0 -1px 0 black;
-}
-
-.menber_activity_image2 {
-  background-image:url(/assets/YUKA.jpg);
-  background-position: 30%  20%;
-  background-repeat: no-repeat;
-}
-.menber_activity_image2 div {
-  text-align: center;
-  padding-left: 120px;
-  color: #ffffff;
-  text-shadow:
-    1px 0 0 black,
-    0 1px 0 black,
-    -1px 0 0 black,
-    0 -1px 0 black;
-}
-
-.menber_activity_image3 {
-  background-image:url(/assets/sora1.jpg);
-  background-position: 30%  20%;
-  background-repeat: no-repeat;
-}
-.menber_activity_image3 div {
-  text-align: center;
-  padding-left: 120px;
-  color: #ffffff;
-  text-shadow:
-    1px 0 0 black,
-    0 1px 0 black,
-    -1px 0 0 black,
-    0 -1px 0 black;
-}
-
-.menber_activity_image4 {
-  background-image:url(/assets/はしも。1.jpg);
-  background-position: 30%  20%;
-  background-repeat: no-repeat;
-}
-.menber_activity_image4 div {
-  text-align: center;
-  padding-left: 120px;
-  color: #ffffff;
-  text-shadow:
-    1px 0 0 black,
-    0 1px 0 black,
-    -1px 0 0 black,
-    0 -1px 0 black;
-}
-
-.menber_activity div div{
-  width: 100%;
-  display: inline-block;
-}
-
-.profile {
-  margin: 200px 0 200px 0; 
-  background-color: #f5f5f5;
 }
 
 .tweet {
