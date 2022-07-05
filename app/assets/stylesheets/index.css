@@ -69,6 +69,51 @@ wrapper {
   background-color: #696969;
   height: 50px;
 }
+
+
+.our_business {
+  /*height: 720px;*/
+  display:table;
+  /*background-image: url('assets/our_business.jpg');*/
+  /*background-repeat: no-repeat;*/
+  /*background-size: cover;*/
+  width:85rem;
+  table-layout: fixed;
+}
+.our_business div {
+  display: table-cell;
+}
+.our_business div p{
+  padding: 2vw 3vw 1vw 3vw;
+  text-align: center;
+}
+.our_business div div{
+  padding: 0 3vw 0 3vw;
+}
+.our_name {
+  height: 720px;
+  background-image: url('assets/to_you.jpg');
+  background-repeat: no-repeat;
+  background-position: 0px  0px;
+  background-size: cover;
+}
+.our_name div {
+  position: absolute;
+  height: 0%;
+}
+.our_name div p{
+  width: 60vw;
+  margin: 0 25vw 0 25vw ;
+}
+
+h3 {
+  position: relative;
+  top: 30%;
+  left: 30%;
+}
+
+
+
 .image_slider div {
   height: 100%;
   width: 100%;
@@ -591,6 +636,9 @@ footer span, footer div{
 }
 
 .under {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100px;
   width: 100%;
   background-color: #f5f5f5;
