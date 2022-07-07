@@ -3,7 +3,7 @@
 
 <wrapper>
 <h1>To brighten<br> your<br> happiness</h1>
-<header>
+<header class="top_index">
   <nav>
     <div class="top-left">
       <p class="search"><%= image_tag 'search_white.png', size: '25x25' %></p>
@@ -105,17 +105,6 @@
     <div class="image11"><%= image_tag 'sora1.jpg', size: '350x300' %><p>click here!!</p><span>ぱくたそmodel そら</span></div>
     <div class="image12"><%= image_tag 'はしも。1.jpg', size: '350x300' %><p>click here!!</p><span>ぱくたそmodel はしも。</span></div>
   </div>
-
-  <section class="profile">
-    <div class="information">
-      <p>ぱくたそmodel さや</p>
-    </div>
-    <div class="tweet">
-      <p>サイト製作者　ツイート</p>
-      <a class="twitter-timeline" data-width="400" data-height="600" href="https://twitter.com/unounounouno31?ref_src=twsrc%5Etfw">Tweets by unounounouno31</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    </div>
-  </section>
-  <div class="under"></div>
   
   <!--モーダルウィンドウ（MENUクリック時に呼び出されるHTML/CSS要素）-->
   <div id="easyModal" class="modal">
@@ -129,19 +118,22 @@
         <p>Let's enjoy learning JavaScript ☺️</p>
         <a href="https://twitter.com/unounounouno31"><img class="twitter_icon" src="/assets/twitter_icon.jpeg" alt="twitter" width="30" height="30"></a>
         <a href="https://www.youtube.com/"><img class="youtube_icon" src="/assets/youtube.jpeg" alt="youtube" width="30" height="30"></a>
+        <p></p>
+        <ul>
+          <nav>
+            <li><%= link_to '会社概要', root_path, class: "text-decoration-none" %></li>
+            <li><%= link_to 'コンテンツ事業紹介', bokes_path, class: "text-decoration-none" %></li>
+            <li><%= link_to 'tiktoker紹介', tiktokers_path, class: "text-decoration-none" %></li>
+            <li><%= link_to 'アプリケーション紹介', bokes_path, class: "text-decoration-none" %></li>
+            <li><%= link_to '画像アップロード機能搭載アプリケーション', image_file_path(1), class: "text-decoration-none" %></li>
+          </nav>
+        </ul>
       </div>
-      <ul>
-        <nav>
-          <li><%= link_to '会社概要', root_path, class: "text-decoration-none" %></li>
-          <li><%= link_to 'コンテンツ事業紹介', bokes_path, class: "text-decoration-none" %></li>
-          <li><%= link_to 'tiktoker紹介', tiktokers_path, class: "text-decoration-none" %></li>
-          <li><%= link_to 'アプリケーション紹介', bokes_path, class: "text-decoration-none" %></li>
-        </nav>
-      </ul>
     </div>
   </div>
   <!--モーダルウィンドウ（終）-->
   
+
 <footer>
   <div>
     <span>お問合せ</span>
@@ -159,7 +151,8 @@
     <%= javascript_include_tag 'index', 'data-turbolinks-track': 'reload' %>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     
-    <h2>メッセージ一覧</h2>
+    
+     <h2>メッセージ一覧</h2>
 <ul>
   <% @messages.each do |message| %>
     <li><%= link_to message.id, message %> : <%= message.content %></li>
@@ -167,4 +160,5 @@
 </ul>
      
 <%= link_to '新規メッセージの投稿', new_message_path %>
+    
 </wrapper>

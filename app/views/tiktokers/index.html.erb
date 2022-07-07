@@ -1,5 +1,24 @@
-<%= stylesheet_link_tag "index", :media => "all" %>
+<%= stylesheet_link_tag "t_index", :media => "all" %>
 <%= stylesheet_link_tag "modal", :media => "all" %>
+
+<header class="tiktoker_index">
+  <nav>
+    <div class="top-left">
+      <p class="search"><%= image_tag 'search_white.png', size: '25x25' %></p>
+      <p>search</p>
+    </div>
+        
+        
+    <div class="top-center">  
+      
+    </div>
+      
+    <div class="top-right">
+      <div id="modalOpen" class="menu">MENU</div>
+    </div>
+  </nav>
+</header>
+
 
 
 <div class="above"><p>ぱくたそmodel 一覧</p></div>
@@ -23,6 +42,18 @@
   </div>
   <div class="under"></div>
   
-      <%= javascript_include_tag 'index', 'data-turbolinks-track': 'reload' %>
+    <section class="profile">
+    <div class="information">
+      <p>ぱくたそmodel さや</p>
+    </div>
+    
+        <div class="tweet">
+      <p>サイト製作者　ツイート</p>
+      <a class="twitter-timeline" data-width="400" data-height="600" href="https://twitter.com/unounounouno31?ref_src=twsrc%5Etfw">Tweets by unounounouno31</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+  </section>
+  <div class="under"></div>
+  
+      <%= javascript_include_tag 't_index', 'data-turbolinks-track': 'reload' %>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
  
