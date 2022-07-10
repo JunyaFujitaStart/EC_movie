@@ -1,23 +1,7 @@
 class BokesController < ApplicationController
 
   def index
-    @result = `python2 #{Rails.root}/app/controllers/sc1.py`
-
-    @sc_url = @result.split('"').grep(/[jpg]/).select do |url|
-                url.include?("jpg")
-            end
-    
-    @img_url = []
-    i=0
-    @sc_url.each do |sc_url|
-      @img_url[i] = "https:#{sc_url}"
-        unless Boke.all.where("image_url LIKE ?", "%#{sc_url}%")
-          Boke.create(boke: '', image_url: @img_url[i] )
-        end
-      i += 1
-    end
-    
-    @img_url = Boke.all
+    @img_url = Boke.last(9)
     
     @messages = Message.all
     
@@ -29,8 +13,44 @@ class BokesController < ApplicationController
   end
 
   def show
-    set_message
+    @params = params[:id]
+    
+    @message = Message.new
+    
+    @result = `python2 #{Rails.root}/app/controllers/sc1.py`
+
+    @sc_url = @result.split('"').grep(/[jpg]/).select do |url|
+                url.include?("jpg")
+            end
+    
+    @img_url = []
+    i=0
+    @sc_url.each do |sc_url|
+      @img_url[i] = "https:#{sc_url}"
+          Boke.create(boke: '', image_url: @img_url[i] )
+      i += 1
+    end
+    
+    @img_url = Boke.last(9)
+    
+    redirect_to bokes_path
   end
+  
+  def show2
+    @params = params[:id]
+    
+    @random_images=Boke.first(9)
+    
+    @random_image=[]
+    @i=1
+    9.times do 
+      @random_image[@i]=Boke.where( 'id >= ?', rand(Boke.first.id..Boke.last.id) ).first.image_url
+      @i+=1
+    end
+    @i = 1
+  end
+  
+  
 
   def new
     @message = Message.new
