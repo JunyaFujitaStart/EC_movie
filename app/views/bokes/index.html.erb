@@ -15,7 +15,7 @@
   </section>
   <section>
   <span class="btn btn-primary"><%= link_to 'スクレイピング新しいお題の画像を取得（1日1回）', boke_path(id: :id) %></span>
-  <span class="btn btn-success"><%= link_to '今までのお題からランダムで9つ取得（何でも可）', show2_path(id: :id) %></span>
+  <span class="btn btn-success"><%= link_to '何でもいいからボケる', show2_path(id: :id) %></span>
   <div>
     <%= @img_url.each_with_index do |img_url, i| %>
     <figure class="card" style="width: 400px;">
@@ -23,8 +23,8 @@
     <p class="image card-img-top" alt="..."><%= image_tag img_url.image_url,width: '350px', height: '350px'  %></p>
     <span class="card-body">
         <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="./bokes/new" class="btn btn-primary">ボケる</a>
+        <p class="card-text"><%= img_url.boke  %></p>
+        <span class="btn btn-primary"><%= link_to 'ボケる',edit_boke_path(id: img_url.id,img_url: img_url.image_url) %></span>
       </span>
     </figure>
     <% end %>

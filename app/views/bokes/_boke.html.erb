@@ -1,0 +1,16 @@
+<%= form_with(model: boke) do |f| %>
+  <% if boke.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+        <% boke.errors.full_messages.each do |boke| %>
+          <li><%= boke %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <%= f.label :boke, '「ボケ」を投稿する' %>
+  <%= f.text_field :boke %>
+  <%= f.submit '投稿する' %>
+  
+<% end %>

@@ -39,47 +39,43 @@ class BokesController < ApplicationController
   def show2
     @params = params[:id]
     
-    @random_images=Boke.first(9)
-    
-    @random_image=[]
-    @i=1
-    9.times do 
-      @random_image[@i]=Boke.where( 'id >= ?', rand(Boke.first.id..Boke.last.id) ).first.image_url
-      @i+=1
-    end
-    @i = 1
+    @random_image=Boke.where( 'id >= ?', rand(Boke.first.id..Boke.last.id) ).first.image_url
   end
   
   
 
   def new
-    @message = Message.new
+    @params = params[:img_url]
+    
+    @boke = Boke.new
   end
 
   def create
-     @message = Message.new(message_params)
+     @boke = Boke.new(boke_params)
 
-    if @message.save
-      flash[:success] = 'Message が正常に投稿されました'
-      redirect_to @message
+    if @boke.save
+      flash[:success] = 'ボケ が正常に投稿されました'
+      redirect_to @boke
     else
-      flash.now[:danger] = 'Message が投稿されませんでした'
+      flash.now[:danger] = 'ボケ が投稿されませんでした'
       render :new
     end
   end
 
   def edit
-    set_message
+    @params = params[:img_url]
+    set_boke
   end
 
   def update
-    set_message
+    @params = params[:id]
+    set_boke
 
-    if @message.update(message_params)
-      flash[:success] = 'Message は正常に更新されました'
-      redirect_to @message
+    if @boke.update(boke_params)
+      flash[:success] = 'ボケ は正常に更新されました'
+      redirect_to bokes_url
     else
-      flash.now[:danger] = 'Message は更新されませんでした'
+      flash.now[:danger] = 'ボケ は更新されませんでした'
       render :edit
     end
   end
@@ -93,11 +89,19 @@ class BokesController < ApplicationController
   end
   
    private
+   
+  def set_boke
+    @boke = Boke.find(params[:id])
+  end
 
   def set_message
     @message = Message.find(params[:id])
   end
 
+  def boke_params
+    params.require(:boke).permit(:boke)
+  end
+  
   def message_params
     params.require(:message).permit(:content)
   end
