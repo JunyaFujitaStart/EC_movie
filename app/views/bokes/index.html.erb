@@ -17,7 +17,7 @@
   <span class="btn btn-primary"><%= link_to 'スクレイピング新しいお題の画像を取得（1日1回）', boke_path(id: :id) %></span>
   <span class="btn btn-success"><%= link_to '何でもいいからボケる', show2_path(id: :id) %></span>
   <div>
-    <%= @img_url.each_with_index do |img_url, i| %>
+    <% @img_url.each_with_index do |img_url, i| %>
     <figure class="card" style="width: 400px;">
     <figcaption>No. <%= i+1 %></figcaption>
     <p class="image card-img-top" alt="..."><%= image_tag img_url.image_url,width: '350px', height: '350px'  %></p>
