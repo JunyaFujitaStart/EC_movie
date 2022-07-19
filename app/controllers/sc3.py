@@ -3,7 +3,7 @@ import sys
 import requests
 from bs4 import BeautifulSoup
 
-url = "https://bokete.jp/boke/trend"
+url = "https://bokete.jp/boke/hot"
 html = requests.get(url)
 soup = BeautifulSoup(html.content, "html.parser")
 for element in soup.find_all(class_="photo-content"):

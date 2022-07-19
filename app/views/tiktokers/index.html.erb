@@ -1,4 +1,4 @@
-<%= stylesheet_link_tag "t_index", :media => "all" %>
+<%= stylesheet_link_tag "index", :media => "all" %>
 <%= stylesheet_link_tag "modal", :media => "all" %>
 
 <header class="tiktoker_index">
@@ -19,6 +19,20 @@
   </nav>
 </header>
 
+  <div class="image_slider">
+    <div class="image1"><%= image_tag 'SAYA.jpg', size: '350x300' %><p>click here!!</p><span>ぱくたそmodel さや</span></div>
+    <div class="image2"><%= image_tag 'YUKA.jpg', size: '350x300' %><p>click here!!</p><span>ぱくたそmodel ゆか</span></div>
+    <div class="image3"><%= image_tag 'sora1.jpg', size: '350x300' %><p>click here!!</p><span>ぱくたそmodel そら</span></div>
+    <div class="image4"><%= image_tag 'はしも。1.jpg', size: '350x300' %><p>click here!!</p><span>ぱくたそmodel はしも。</span></div>
+    <div class="image5"><%= image_tag 'SAYA.jpg', size: '350x300' %><p>click here!!</p><span>ぱくたそmodel さや</span></div>
+    <div class="image6"><%= image_tag 'YUKA.jpg', size: '350x300' %><p>click here!!</p><span>ぱくたそmodel ゆか</span></div>
+    <div class="image7"><%= image_tag 'sora1.jpg', size: '350x300' %><p>click here!!</p><span>ぱくたそmodel そら</span></div>
+    <div class="image8"><%= image_tag 'はしも。1.jpg', size: '350x300' %><p>click here!!</p><span>ぱくたそmodel はしも。</span></div>
+    <div class="image9"><%= image_tag 'SAYA.jpg', size: '350x300' %><p>click here!!</p><span>ぱくたそmodel さや</span></div>
+    <div class="image10"><%= image_tag 'YUKA.jpg', size: '350x300' %><p>click here!!</p><span>ぱくたそmodel ゆか</span></div>
+    <div class="image11"><%= image_tag 'sora1.jpg', size: '350x300' %><p>click here!!</p><span>ぱくたそmodel そら</span></div>
+    <div class="image12"><%= image_tag 'はしも。1.jpg', size: '350x300' %><p>click here!!</p><span>ぱくたそmodel はしも。</span></div>
+  </div>
 
 
 <div class="above"><p>ぱくたそmodel 一覧</p></div>
@@ -54,6 +68,44 @@
   </section>
   <div class="under"></div>
   
-      <%= javascript_include_tag 't_index', 'data-turbolinks-track': 'reload' %>
+    <!--モーダルウィンドウ（MENUクリック時に呼び出されるHTML/CSS要素）-->
+  <div id="easyModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Great job 🎉</h2>
+        <span class="modalClose">×</span>
+      </div>
+      <div class="modal-body">
+        <p>You've just displayed this awesome Modal Window!</p>
+        <p>Let's enjoy learning JavaScript ☺️</p>
+        <a href="https://twitter.com/unounounouno31"><img class="twitter_icon" src="/assets/twitter_icon.jpeg" alt="twitter" width="30" height="30"></a>
+        <a href="https://www.youtube.com/"><img class="youtube_icon" src="/assets/youtube.jpeg" alt="youtube" width="30" height="30"></a>
+        <p></p>
+        <ul>
+          <nav>
+            <li><%= link_to '会社概要', root_path, class: "text-decoration-none" %></li>
+            <li><%= link_to 'tiktoker紹介', tiktokers_path, class: "text-decoration-none" %></li>
+            <li><%= link_to 'Pythonによるボケて！のサイトから大喜利のお題をWebスクレイピングした大喜利保存サイト boke', bokes_path, class: "text-decoration-none" %></li>
+            <li><%= link_to '楽天の書籍検索APIを用いたブックレビューサイト myfavorites ', 'https://bookreview20220205.herokuapp.com/', class: "text-decoration-none" %></li>
+          </nav>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!--モーダルウィンドウ（終）-->
+  
+  <footer>
+  <div>
+    <span>お問合せ</span>
+    <span>プライバシーポリシー</span>
+    <span>サイトマップ</span>
+  </div>
+  <div>
+    <div>© Copyright 2022 動画コンテンツ販売.</div>
+    <div>動画コンテンツ販売 by FIT-Web Create. Powered by WordPress.</div>
+  </div>
+</footer>
+  
+      <%= javascript_include_tag 'index', 'data-turbolinks-track': 'reload' %>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
  

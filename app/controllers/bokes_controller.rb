@@ -1,39 +1,63 @@
 class BokesController < ApplicationController
 
   def index
-    @img_url = Boke.last(9)
+    # sc1.pyで1ページ目スクレイピング開始
+    
+    @result = `python2 #{Rails.root}/app/controllers/sc1.py`
+
+    @sc_url = @result.split('"').grep(/[jpg]/).select do |url|
+                url.include?("jpg")
+    end
+    
+    @img_url = []
+    i=0
+    @sc_url.each do |sc_url|
+      @img_url[i] = "https:#{sc_url}"
+      Boke.create(boke: '', image_url: @img_url[i] )
+      i += 1
+    end
+    
+    # sc1.pyで1ページ目スクレイピング終了
+    # sc2.pyで2ページ目スクレイピング開始
+    @result = `python2 #{Rails.root}/app/controllers/sc2.py`
+
+    @sc_url = @result.split('"').grep(/[jpg]/).select do |url|
+                url.include?("jpg")
+    end
+    
+    i=10
+    @sc_url.each do |sc_url|
+      @img_url[i] = "https:#{sc_url}"
+      Boke.create(boke: '', image_url: @img_url[i] )
+      i += 1
+    end
+    # sc2.pyで2ページ目スクレイピング終了
+    # sc3.pyで3ページ目スクレイピング開始
+    @result = `python2 #{Rails.root}/app/controllers/sc3.py`
+
+    @sc_url = @result.split('"').grep(/[jpg]/).select do |url|
+                url.include?("jpg")
+    end
+    
+    i=20
+    @sc_url.each do |sc_url|
+      @img_url[i] = "https:#{sc_url}"
+      Boke.create(boke: '', image_url: @img_url[i] )
+      i += 1
+    end
+    # sc3.pyで3ページ目スクレイピング終了
+    
+    
     
     @messages = Message.all
-    
-    # @xxxx = Message.xxxx
-    # Message.yyyy
-    # @zzzz = Message.zzzz
-    
-    # @img_url = @bokete_img.split("\n")
   end
 
   def show
     @params = params[:id]
     
     @message = Message.new
-    
-    @result = `python2 #{Rails.root}/app/controllers/sc1.py`
-
-    @sc_url = @result.split('"').grep(/[jpg]/).select do |url|
-                url.include?("jpg")
-            end
-    
-    @img_url = []
-    i=0
-    @sc_url.each do |sc_url|
-      @img_url[i] = "https:#{sc_url}"
-          Boke.create(boke: '', image_url: @img_url[i] )
-      i += 1
-    end
-    
-    @img_url = Boke.last(9)
-    
-    redirect_to bokes_path
+   
+    @img_url = Boke.all
   end
   
   def show2
@@ -45,16 +69,17 @@ class BokesController < ApplicationController
   
 
   def new
-    @params = params[:img_url]
+    $new_boke_params = params[:img_url]
     
     @boke = Boke.new
   end
 
   def create
-     @boke = Boke.new(boke_params)
+    @boke = Boke.new(boke_params)
 
     if @boke.save
       flash[:success] = 'ボケ が正常に投稿されました'
+      @new_boke = Boke.last.update(image_url: $new_boke_params)
       redirect_to @boke
     else
       flash.now[:danger] = 'ボケ が投稿されませんでした'

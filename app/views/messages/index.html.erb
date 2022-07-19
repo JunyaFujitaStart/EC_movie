@@ -20,7 +20,7 @@
     </div>
   </nav>
 </header>
-<div class="under"><p>もっと幸せに！</p></div>
+<div class="under"><p>あなたの幸せを輝かせるために！</p></div>
 
 <div class="above"><p>企業名</p></div>
 <section class="our_name">
@@ -84,28 +84,13 @@
   <div><%= image_tag 'アクセス2.jpg', size: '500x350' %><p>JR御幣島駅→本拠所在地</p></div>
   <div><%= image_tag 'アクセス1.png', size: '500x350' %><p>なんば線　福駅→本拠所在地</p></div>
 </section>
-<div class="under"></div>
+<div class="under">事業内容</div>
 
 <div class="contents_bar">
-    <span class="A">リンクA</span><span class="B">リンクB</span><span class="C"><%= link_to 'ボケ集', bokes_path, class: "text-decoration-none" %></span>
+    <span class="A"></span><span class="B"><%= link_to 'tiktokerの動画コンテンツ販売、グッズ作成、プロモーション活動、広告宣伝などのマーケティング活動',tiktokers_path, class: "text-decoration-none" %></span><span class="C"><%= link_to 'Webアプリケーションの作成　「Pythonによるボケて！のサイトから大喜利のお題をWebスクレイピングした大喜利保存サイト boke」', bokes_path, class: "text-decoration-none" %></span><span class="C"><%= link_to 'Webアプリケーションの作成　「楽天の書籍検索APIを利用したブックレビューサイト myfavorites」','https://bookreview20220205.herokuapp.com/', class: "text-decoration-none" %></span>
   </div>
   <div class="text_slider"><p>Welcome to my page, 「タイトル（考え中）」!!オーダーメイドいけます！！</p></div>
 
-  <div class="image_slider">
-    <div class="image1"><%= image_tag 'SAYA.jpg', size: '350x300' %><p>click here!!</p><span>ぱくたそmodel さや</span></div>
-    <div class="image2"><%= image_tag 'YUKA.jpg', size: '350x300' %><p>click here!!</p><span>ぱくたそmodel ゆか</span></div>
-    <div class="image3"><%= image_tag 'sora1.jpg', size: '350x300' %><p>click here!!</p><span>ぱくたそmodel そら</span></div>
-    <div class="image4"><%= image_tag 'はしも。1.jpg', size: '350x300' %><p>click here!!</p><span>ぱくたそmodel はしも。</span></div>
-    <div class="image5"><%= image_tag 'SAYA.jpg', size: '350x300' %><p>click here!!</p><span>ぱくたそmodel さや</span></div>
-    <div class="image6"><%= image_tag 'YUKA.jpg', size: '350x300' %><p>click here!!</p><span>ぱくたそmodel ゆか</span></div>
-    <div class="image7"><%= image_tag 'sora1.jpg', size: '350x300' %><p>click here!!</p><span>ぱくたそmodel そら</span></div>
-    <div class="image8"><%= image_tag 'はしも。1.jpg', size: '350x300' %><p>click here!!</p><span>ぱくたそmodel はしも。</span></div>
-    <div class="image9"><%= image_tag 'SAYA.jpg', size: '350x300' %><p>click here!!</p><span>ぱくたそmodel さや</span></div>
-    <div class="image10"><%= image_tag 'YUKA.jpg', size: '350x300' %><p>click here!!</p><span>ぱくたそmodel ゆか</span></div>
-    <div class="image11"><%= image_tag 'sora1.jpg', size: '350x300' %><p>click here!!</p><span>ぱくたそmodel そら</span></div>
-    <div class="image12"><%= image_tag 'はしも。1.jpg', size: '350x300' %><p>click here!!</p><span>ぱくたそmodel はしも。</span></div>
-  </div>
-  
   <!--モーダルウィンドウ（MENUクリック時に呼び出されるHTML/CSS要素）-->
   <div id="easyModal" class="modal">
     <div class="modal-content">
@@ -122,43 +107,16 @@
         <ul>
           <nav>
             <li><%= link_to '会社概要', root_path, class: "text-decoration-none" %></li>
-            <li><%= link_to 'コンテンツ事業紹介', bokes_path, class: "text-decoration-none" %></li>
             <li><%= link_to 'tiktoker紹介', tiktokers_path, class: "text-decoration-none" %></li>
-            <li><%= link_to 'PythonによるWebスクレイピング', bokes_path, class: "text-decoration-none" %></li>
-            <li><%= link_to '画像アップロード機能搭載アプリケーション', image_file_path(1), class: "text-decoration-none" %></li>
+            <li><%= link_to 'Pythonによるボケて！のサイトから大喜利のお題をWebスクレイピングした大喜利保存サイト boke', bokes_path, class: "text-decoration-none" %></li>
+            <li><%= link_to '楽天の書籍検索APIを用いたブックレビューサイト myfavorites ', 'https://bookreview20220205.herokuapp.com/', class: "text-decoration-none" %></li>
           </nav>
         </ul>
       </div>
     </div>
   </div>
   <!--モーダルウィンドウ（終）-->
-  
-
-<footer>
-  <div>
-    <span>お問合せ</span>
-    <span>プライバシーポリシー</span>
-    <span>サイトマップ</span>
-  </div>
-  <div>
-    <div>© Copyright 2022 動画コンテンツ販売.</div>
-    <div>動画コンテンツ販売 by FIT-Web Create. Powered by WordPress.</div>
-  </div>
-</footer>
-
-
-
-    <%= javascript_include_tag 'index', 'data-turbolinks-track': 'reload' %>
+</wrapper>
+ <%= javascript_include_tag 'index', 'data-turbolinks-track': 'reload' %>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     
-    
-     <h2>メッセージ一覧</h2>
-<ul>
-  <% @messages.each do |message| %>
-    <li><%= link_to message.id, message %> : <%= message.content %></li>
-  <% end %>
-</ul>
-     
-<%= link_to '新規メッセージの投稿', new_message_path %>
-    
-</wrapper>
