@@ -2,6 +2,7 @@
 <%= stylesheet_link_tag "bokes_index", :media => "all" %>
 
 
+
 <wrapper>
   <header class="top_index">
   <nav>
@@ -40,7 +41,7 @@
     <figcaption>No. <%= i+1 %></figcaption>
     <p class="image card-img-top" alt="..."><%= image_tag img_url,width: '350px', height: '350px'  %></p>
     <span class="card-body">
-        <h5 class="card-title">Card title</h5>
+        <h5 class="card-title"></h5>
         <p class="card-text"><%= img_url  %></p>
         <span class="btn btn-primary"><%= link_to 'ボケる',new_boke_path(img_url: img_url) %></span>
       </span>
@@ -49,9 +50,8 @@
   </div>
 </section>
 
-<footer>
 <%= link_to '新規メッセージの投稿', new_message_path %>
-</footer>
+
   <!--モーダルウィンドウ（MENUクリック時に呼び出されるHTML/CSS要素）-->
   <div id="easyModal" class="modal">
     <div class="modal-content">
@@ -79,6 +79,25 @@
   </div>
   <!--モーダルウィンドウ（終）-->
   </wrapper>
+  
+  <div class="under">事業内容</div>
+  <div class="contents_bar">
+    <span class="A"><%= link_to tiktokers_path do %><%= image_tag 'SAYA_up.jpeg', size: '450x350' %><% end %><p>tiktokerの動画コンテンツ販売、写真素材、グッズ作成、プロモーション活動、広告宣伝などのマーケティング活動</p></span>
+    <span class="B"><%= link_to bokes_path do %><%= image_tag 'BOKE_up.png', size: '450x350' %><% end %><p>Webアプリケーションの作成　「Pythonによるボケて！のサイトから大喜利のお題をWebスクレイピングした大喜利保存サイト boke」</p></span>
+    <span class="C"><%= link_to 'https://bookreview20220205.herokuapp.com/' do %><%= image_tag 'MYFAVORITES_up.jpeg', size: '450x350' %><% end %><p>Webアプリケーションの作成　「楽天の書籍検索APIを利用したブックレビューサイト myfavorites」</p></span>
+  </div>
+  
+  <footer>
+    <div>
+      <span>お問合せ</span>
+      <span>プライバシーポリシー</span>
+      <span>サイトマップ</span>
+    </div>
+    <div>
+      <div>© Copyright 2022 動画コンテンツ販売.</div>
+      <div>動画コンテンツ販売 by FIT-Web Create. Powered by WordPress.</div>
+    </div>
+  </footer>
   
    <%= javascript_include_tag 'index', 'data-turbolinks-track': 'reload' %>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>

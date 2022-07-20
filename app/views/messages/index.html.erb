@@ -28,9 +28,9 @@
     <h3>株式会社 to・you （トゥ・ユー）</h3>
     <p>私たちは、お客様のために、共に働く仲間のために、「笑顔」になれる何かを追求するための会社です。<br>
     具体的なサービスとしては、<br>
-    1 インターネットサイトの構築<br>
-    2 ブログ用写真の撮影・編集、素材の販売<br>
-    3 アプリケーション開発<br>
+    1 インターネットサイトの構築（HTML/CSS/JavaScriptなどの言語で開発するフロントエンド系のサイト）<br>
+    2 tiktokerの動画コンテンツ販売、写真素材、グッズ作成、プロモーション活動、広告宣伝などのマーケティング活動<br>
+    3 アプリケーション開発(Ruby on railsによるデータベースを備えたサイト構築 ＋ API / Python　などによる、ユーザーを楽しませるWebアプリケーションの開発)<br>
     を主軸に、その時々で、お客様の要望に応じたシステム開発により、収益を得ています。
     </p>
   </div>
@@ -85,11 +85,13 @@
   <div><%= image_tag 'アクセス1.png', size: '500x350' %><p>なんば線　福駅→本拠所在地</p></div>
 </section>
 <div class="under">事業内容</div>
-
-<div class="contents_bar">
-    <span class="A"></span><span class="B"><%= link_to 'tiktokerの動画コンテンツ販売、グッズ作成、プロモーション活動、広告宣伝などのマーケティング活動',tiktokers_path, class: "text-decoration-none" %></span><span class="C"><%= link_to 'Webアプリケーションの作成　「Pythonによるボケて！のサイトから大喜利のお題をWebスクレイピングした大喜利保存サイト boke」', bokes_path, class: "text-decoration-none" %></span><span class="C"><%= link_to 'Webアプリケーションの作成　「楽天の書籍検索APIを利用したブックレビューサイト myfavorites」','https://bookreview20220205.herokuapp.com/', class: "text-decoration-none" %></span>
+  <div class="contents_bar">
+    <span class="A"><%= link_to tiktokers_path do %><%= image_tag 'SAYA_up.jpeg', size: '450x350' %><% end %><p>tiktokerの動画コンテンツ販売、写真素材、グッズ作成、プロモーション活動、広告宣伝などのマーケティング活動</p></span>
+    <span class="B"><%= link_to bokes_path do %><%= image_tag 'BOKE_up.png', size: '450x350' %><% end %><p>Webアプリケーションの作成　「Pythonによるボケて！のサイトから大喜利のお題をWebスクレイピングした大喜利保存サイト boke」</p></span>
+    <span class="C"><%= link_to 'https://bookreview20220205.herokuapp.com/' do %><%= image_tag 'MYFAVORITES_up.jpeg', size: '450x350' %><% end %><p>Webアプリケーションの作成　「楽天の書籍検索APIを利用したブックレビューサイト myfavorites」</p></span>
   </div>
-  <div class="text_slider"><p>Welcome to my page, 「タイトル（考え中）」!!オーダーメイドいけます！！</p></div>
+  
+<div class="text_slider"><p>Welcome to my page, 「タイトル（考え中）」!!オーダーメイドいけます！！</p></div>
 
   <!--モーダルウィンドウ（MENUクリック時に呼び出されるHTML/CSS要素）-->
   <div id="easyModal" class="modal">

@@ -67,14 +67,26 @@ wrapper {
 }
 .A {
   margin-left: 10px;
+  height: 30rem;
+  width: 31%;
 }
 .A:hover {
   opacity: 0.4;
 }
 .B {
   margin-left: 20px;
+  height: 30rem;
+  width: 31%;
 }
 .B:hover {
+  opacity: 0.4;
+}
+.C {
+  margin-left: 20px;
+  height: 30rem;
+  width: 31%;
+}
+.C:hover {
   opacity: 0.4;
 }
 
