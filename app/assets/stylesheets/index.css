@@ -1,5 +1,6 @@
 wrapper h1 {
   position: absolute;
+  width: 100%;
   color: #000000;
   font-size: 9.5rem;
   opacity: 0.8;
@@ -22,6 +23,7 @@ header nav {
   width: 100vw;
   height: 200px;
   top: 0;
+  left: 0;
   z-index: 5;
   display: table;
 }
@@ -29,6 +31,7 @@ wrapper {
   width: 100%;
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 .top-left p {
@@ -103,7 +106,7 @@ wrapper {
 .our_business {
   /*height: 720px;*/
   display:table;
-  width:85rem;
+  width:100%;
   table-layout: fixed;
   border-collapse: separate;
   border-spacing: 50px 0;
@@ -144,6 +147,7 @@ h3 {
   display: table;
   border-collapse: separate;
   border-spacing: 50px 0;
+  width: 100%;
 }
 .map div{
   padding: 50px;

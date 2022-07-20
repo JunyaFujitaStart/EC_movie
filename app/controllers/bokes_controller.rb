@@ -57,7 +57,7 @@ class BokesController < ApplicationController
     
     @message = Message.new
    
-    @img_url = Boke.all
+    @img_url = Boke.all.order(updated_at: "DESC")
   end
   
   def show2
