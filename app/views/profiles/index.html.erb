@@ -1,0 +1,51 @@
+<%= stylesheet_link_tag "modal", :media => "all" %>
+
+    
+  <div class="tweet">
+    <p>サイト製作者　ツイート</p>
+    <a class="twitter-timeline" data-width="400" data-height="600" href="https://twitter.com/unounounouno31?ref_src=twsrc%5Etfw">Tweets by unounounouno31</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+  </section>
+  <div class="under"></div>
+
+<!--モーダルウィンドウ（MENUクリック時に呼び出されるHTML/CSS要素）-->
+  <div id="easyModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Great job 🎉</h2>
+        <span class="modalClose">×</span>
+      </div>
+      <div class="modal-body">
+        <p>You've just displayed this awesome Modal Window!</p>
+        <p>Let's enjoy learning JavaScript ☺️</p>
+        <a href="https://twitter.com/unounounouno31"><img class="twitter_icon" src="/assets/twitter_icon.jpeg" alt="twitter" width="30" height="30"></a>
+        <a href="https://www.youtube.com/"><img class="youtube_icon" src="/assets/youtube.jpeg" alt="youtube" width="30" height="30"></a>
+        <p></p>
+        <ul>
+          <nav>
+            <li><%= link_to '会社概要', root_path, class: "text-decoration-none" %></li>
+            <li><%= link_to 'tiktoker紹介', tiktokers_path, class: "text-decoration-none" %></li>
+            <li><%= link_to 'Pythonによるボケて！のサイトから大喜利のお題をWebスクレイピングした大喜利保存サイト boke', bokes_path, class: "text-decoration-none" %></li>
+          </nav>
+        </ul>
+        <div>今までのサイト（別ページへ）　</div>
+        <p><%= link_to '楽天の書籍検索APIを用いたブックレビューサイト myfavorites ', 'https://bookreview20220205.herokuapp.com/', class: "text-decoration-none" %></p>
+      </div>
+    </div>
+  </div>
+  <!--モーダルウィンドウ（終）-->
+  <footer>
+  <div>
+    <span>お問合せ</span>
+    <span>プライバシーポリシー</span>
+    <span>サイトマップ</span>
+  </div>
+  <div>
+    <div>© Copyright 2022 動画コンテンツ販売.</div>
+    <div>動画コンテンツ販売 by FIT-Web Create. Powered by WordPress.</div>
+  </div>
+</footer>
+  
+      <%= javascript_include_tag 'index', 'data-turbolinks-track': 'reload' %>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+ 

@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   
   get 'show2', to: 'bokes#show2'
   
+  get 'profiles', to: 'profiles#index'
+  
   resources :messages
   resources :bokes
   resources :tiktokers

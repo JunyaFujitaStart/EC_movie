@@ -31,6 +31,28 @@ wrapper {
   padding: 0;
   position: relative;
 }
+.boke_top span {
+  display: inline-block;
+  height: 6rem;
+  vertical-align: top;
+}
+
+.boke_message {
+  height: 10rem;
+  width: 50%;
+  margin: 1rem 6rem;
+}
+
+.boke_message ul li{
+  background-color: #696969;
+  width: 25em;
+}
+
+.boke_index {
+  height: 10rem;
+  width: 50%;
+  margin: 1rem 6rem 1rem 12rem;
+}
 
 .top-left p {
   margin: 0;
@@ -64,7 +86,11 @@ h1 {
 }
 h4 {
   color:#dc143c;
-  font-size: 2.8rem;
+  font-size: 2.2rem;
+}
+
+.boke_theme {
+  margin: 2rem 0rem;
 }
 
 figcaption {
@@ -90,7 +116,6 @@ a {
 }
 
 .btn:hover {
-  background-color: #ffffff;
   color: #555555;
 }
 
