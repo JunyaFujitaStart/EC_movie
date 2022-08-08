@@ -1,10 +1,9 @@
 <%= stylesheet_link_tag "bokes_new", :media => "all" %>
 <body>
   <div class="title">
-    <h7>さあボケて！！（お膳立て）</h7>
+    <h7>さあボケて！！</h7>
   </div>
   
-  <p><%= image_tag $new_boke_params, width: '350px', height: '350px'  %></p>
-
-<%= render 'boke', boke: @boke %>
+  <span class="image"><%= image_tag $new_boke_params, width: '450px', height: '500px'  %></span>
+  <span><%= render 'boke', boke: @boke %></span>
 </body>

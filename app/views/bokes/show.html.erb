@@ -11,6 +11,7 @@
         <h5 class="card-title"></h5>
         <p class="card-text"><%= img_url.boke  %></p>
         <span class="btn btn-primary"><%= link_to 'ボケる',edit_boke_path(id: img_url.id,img_url: img_url.image_url) %></span>
+        <span class="btn btn-danger"><%= link_to 'ボケを消す',delete_path(id: img_url.id) %></span>
       </span>
     </figure>
     <% end %>

@@ -6,8 +6,7 @@ Rails.application.routes.draw do
   get 'show2', to: 'bokes#show2'
   
   get 'profiles', to: 'profiles#index'
+  delete 'delete', to: 'bokes#destroy', as: 'delete'
   
-  resources :messages
-  resources :bokes
-  resources :tiktokers
+  resources :messages, :bokes, :tiktokers
 end

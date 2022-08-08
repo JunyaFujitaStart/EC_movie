@@ -7,8 +7,8 @@
   <header class="top_index">
   <nav>
     <div class="top-left">
-      <p class="search"><%= image_tag 'search_white.png', size: '25x25' %></p>
-      <p>search</p>
+      <!--<p class="search"><%= image_tag 'search_white.png', size: '25x25' %></p>-->
+      <!--<p>search</p>-->
     </div>
         
         
@@ -21,27 +21,11 @@
     </div>
   </nav>
   </header>
-  <section class="boke_top">
-    <div class="title">
-      <h7>Pythonによるボケて！のサイトから大喜利のお題をWebスクレイピングした大喜利保存サイト boke</h7>
-    </div>
-    <span class="boke_message">
-      <h4>みんなのメッセージ一覧〜交流用〜</h4>
-      <ul>
-        <% @messages.each do |message| %>
-          <li><span><%= link_to message.id%></span><span>: <%= message.content %></span></li>
-        <% end %>
-      </ul>
-      <%= link_to '新規メッセージの投稿', new_message_path %>
-    </span>
-    <span class="boke_index">
-      <h4>今までのボケ一覧</h4>
-      <div class="btn btn-primary">
-        <%= link_to '投稿されたボケを見る', boke_path(id: :id) %>
-      </div>
-    </span>
+  <section class="title">
+    <h7>Pythonによるボケて！のサイトから大喜利のお題をWebスクレイピングした大喜利保存サイト boke</h7>
   </section>
   <section class="boke_theme">
+  <h3>下の画像の中から、好きな画像を選んで、自由に「ボケ」てね！！</h3>
   <div>
     <% @img_url.each_with_index do |img_url, i| %>
     <figure class="card" style="width: 400px;">
@@ -49,11 +33,19 @@
     <p class="image card-img-top" alt="..."><%= image_tag img_url,width: '350px', height: '350px'  %></p>
     <span class="card-body">
         <h5 class="card-title"></h5>
-        <p class="card-text"><%= img_url  %></p>
+        <p class="card-text"></p>
         <span class="btn btn-primary"><%= link_to 'ボケる',new_boke_path(img_url: img_url) %></span>
       </span>
     </figure>
     <% end %>
+  </div>
+</section>
+<section class="boke_top">
+  <div class="boke_index">
+    <span class="bokes_show">今までのボケ一覧</span>
+    <span id="bokes_show_button" class="btn btn-primary">
+      <%= link_to '投稿されたボケを見る', boke_path(id: :id) %>
+    </span>
   </div>
 </section>
 

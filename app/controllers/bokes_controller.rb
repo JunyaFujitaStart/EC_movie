@@ -106,11 +106,12 @@ class BokesController < ApplicationController
   end
 
   def destroy
-    set_message
-    @message.destroy
+    @params = params[:id]
+    set_boke
+    @boke.destroy
 
-    flash[:success] = 'Message は正常に削除されました'
-    redirect_to messages_url
+    flash[:success] = 'ボケ は正常に削除されました'
+    redirect_to bokes_url
   end
   
    private
